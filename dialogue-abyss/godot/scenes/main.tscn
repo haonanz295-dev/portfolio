@@ -1,0 +1,213 @@
+[gd_scene load_steps=9 format=3]
+[ext_resource path="res://scripts/main.gd" type="Script" id="1"]
+[ext_resource path="res://scenes/diver.tscn" type="PackedScene" id="2"]
+[ext_resource path="res://assets/art/ocean-keyart.png" type="Texture2D" id="3"]
+[ext_resource path="res://assets/audio/bgm/twilight.wav" type="AudioStream" id="4"]
+[ext_resource path="res://assets/audio/sfx/sonar.wav" type="AudioStream" id="5"]
+[ext_resource path="res://assets/audio/sfx/confirm.wav" type="AudioStream" id="6"]
+[sub_resource type="Environment" id="Environment"]
+background_mode = 1
+background_color = Color(0.012, 0.06, 0.08, 1)
+ambient_light_source = 3
+ambient_light_color = Color(0.08, 0.28, 0.32, 1)
+ambient_light_energy = 0.8
+fog_enabled = true
+fog_light_color = Color(0.08, 0.32, 0.35, 1)
+fog_density = 0.018
+fog_height = 12.0
+fog_height_density = 0.08
+
+[node name="Main" type="Node3D"]
+script = ExtResource("1")
+[node name="BGM" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4")
+volume_db = -15.0
+autoplay = true
+[node name="SonarSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5")
+volume_db = -8.0
+[node name="ConfirmSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6")
+volume_db = -7.0
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment")
+[node name="Sun" type="DirectionalLight3D" parent="."]
+rotation_degrees = Vector3(-55,-25,0)
+light_color = Color(0.96,0.75,0.38,1)
+light_energy = 1.6
+shadow_enabled = true
+[node name="Diver" parent="." instance=ExtResource("2")]
+position = Vector3(0, 2, 8)
+[node name="CameraRig" type="Node3D" parent="."]
+[node name="Camera3D" type="Camera3D" parent="CameraRig"]
+position = Vector3(0, 4.8, 12)
+current = true
+[node name="UI" type="CanvasLayer" parent="."]
+[node name="HUD" type="Control" parent="UI"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+[node name="Title" type="Label" parent="UI/HUD"]
+offset_left = 28.0
+offset_top = 22.0
+text = "对话深渊  ·  NATIVE DIVE"
+theme_override_font_sizes/font_size = 24
+[node name="Status" type="Label" parent="UI/HUD"]
+offset_left = 28.0
+offset_top = 58.0
+text = "WASD 游动  Q/E 升降  Space 声呐  F 互动  T 跟随  P 摄影"
+[node name="Depth" type="Label" parent="UI/HUD"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -240.0
+offset_top = 24.0
+offset_right = -28.0
+offset_bottom = 56.0
+text = "暮光层 · -120m"
+horizontal_alignment = 2
+[node name="Message" type="Label" parent="UI/HUD"]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 170.0
+offset_top = -112.0
+offset_right = -170.0
+offset_bottom = -42.0
+text = "发出声呐，看看谁愿意回应。"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+theme_override_font_sizes/font_size = 20
+[node name="PhotoHint" type="Label" parent="UI/HUD"]
+anchors_preset = 0
+offset_left = 28.0
+offset_top = 95.0
+text = ""
+[node name="Objective" type="Label" parent="UI/HUD"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -310.0
+offset_top = 66.0
+offset_right = -28.0
+offset_bottom = 96.0
+text = "共鸣微光 0 / 5"
+horizontal_alignment = 2
+
+[node name="TitleOverlay" type="Control" parent="UI"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+[node name="Keyart" type="TextureRect" parent="UI/TitleOverlay"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource("3")
+expand_mode = 1
+stretch_mode = 6
+[node name="Shade" type="ColorRect" parent="UI/TitleOverlay"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0.01,0.04,0.07,0.48)
+[node name="Title" type="Label" parent="UI/TitleOverlay"]
+offset_left = 95.0
+offset_top = 170.0
+offset_right = 650.0
+offset_bottom = 260.0
+text = "对话深渊\nDIALOGUE ABYSS · NATIVE"
+theme_override_font_sizes/font_size = 38
+[node name="Description" type="Label" parent="UI/TitleOverlay"]
+offset_left = 98.0
+offset_top = 285.0
+offset_right = 650.0
+offset_bottom = 375.0
+text = "在暮光海域中游动、发出声呐，寻找五枚共鸣微光。\n靠近隐喻生物，选择陪伴或保持距离。"
+theme_override_font_sizes/font_size = 19
+[node name="Start" type="Button" parent="UI/TitleOverlay"]
+offset_left = 98.0
+offset_top = 410.0
+offset_right = 330.0
+offset_bottom = 470.0
+text = "开始潜入"
+[node name="Controls" type="Label" parent="UI/TitleOverlay"]
+offset_left = 98.0
+offset_top = 490.0
+offset_right = 760.0
+offset_bottom = 565.0
+text = "WASD 游动 · Q/E 升降 · Space 声呐 · F 互动 · T 跟随 · P 摄影 · Esc 暂停"
+
+[node name="PausePanel" type="PanelContainer" parent="UI"]
+process_mode = 3
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -230.0
+offset_top = -155.0
+offset_right = 230.0
+offset_bottom = 155.0
+[node name="VBox" type="VBoxContainer" parent="UI/PausePanel"]
+layout_mode = 2
+theme_override_constants/separation = 14
+[node name="Title" type="Label" parent="UI/PausePanel/VBox"]
+layout_mode = 2
+text = "暂停 · 感官设置"
+horizontal_alignment = 1
+theme_override_font_sizes/font_size = 28
+[node name="Hint" type="Label" parent="UI/PausePanel/VBox"]
+layout_mode = 2
+text = "你可以随时停下。返回不会扣除任何进度。"
+horizontal_alignment = 1
+[node name="VolumeLabel" type="Label" parent="UI/PausePanel/VBox"]
+layout_mode = 2
+text = "环境音乐"
+[node name="Volume" type="HSlider" parent="UI/PausePanel/VBox"]
+layout_mode = 2
+max_value = 1.0
+step = 0.05
+value = 0.55
+[node name="Resume" type="Button" parent="UI/PausePanel/VBox"]
+layout_mode = 2
+text = "继续下潜"
+[node name="ReturnTitle" type="Button" parent="UI/PausePanel/VBox"]
+layout_mode = 2
+text = "返回标题"
+
+[node name="Completion" type="PanelContainer" parent="UI"]
+process_mode = 3
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -125.0
+offset_right = 300.0
+offset_bottom = 125.0
+[node name="VBox" type="VBoxContainer" parent="UI/Completion"]
+layout_mode = 2
+[node name="Title" type="Label" parent="UI/Completion/VBox"]
+layout_mode = 2
+text = "暮光共鸣完成"
+horizontal_alignment = 1
+theme_override_font_sizes/font_size = 30
+[node name="Text" type="Label" parent="UI/Completion/VBox"]
+layout_mode = 2
+text = "你找到了五枚微光。焦虑是否消失，不决定这次靠近是否有意义。"
+horizontal_alignment = 1
+autowrap_mode = 2
+[node name="Continue" type="Button" parent="UI/Completion/VBox"]
+layout_mode = 2
+text = "继续自由探索"

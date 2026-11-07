@@ -1,0 +1,68 @@
+[
+  {
+    "region": "shallow",
+    "seconds": 100.8,
+    "form": "A / B / A-prime, phrase rests",
+    "layers": [
+      "music",
+      "beds"
+    ],
+    "format": "22050 Hz 16bit stereo",
+    "source": "original procedural arrangement"
+  },
+  {
+    "region": "garden",
+    "seconds": 91.2,
+    "form": "A / B / A-prime, phrase rests",
+    "layers": [
+      "music",
+      "beds"
+    ],
+    "format": "22050 Hz 16bit stereo",
+    "source": "original procedural arrangement"
+  },
+  {
+    "region": "jelly",
+    "seconds": 115.2,
+    "form": "A / B / A-prime, phrase rests",
+    "layers": [
+      "music",
+      "beds"
+    ],
+    "format": "22050 Hz 16bit stereo",
+    "source": "original procedural arrangement"
+  },
+  {
+    "region": "canyon",
+    "seconds": 110.4,
+    "form": "A / B / A-prime, phrase rests",
+    "layers": [
+      "music",
+      "beds"
+    ],
+    "format": "22050 Hz 16bit stereo",
+    "source": "original procedural arrangement"
+  },
+  {
+    "region": "whale",
+    "seconds": 134.4,
+    "form": "A / B / A-prime, phrase rests",
+    "layers": [
+      "music",
+      "beds"
+    ],
+    "format": "22050 Hz 16bit stereo",
+    "source": "original procedural arrangement"
+  },
+  {
+    "region": "sunset",
+    "seconds": 120.0,
+    "form": "A / B / A-prime, phrase rests",
+    "layers": [
+      "music",
+      "beds"
+    ],
+    "format": "22050 Hz 16bit stereo",
+    "source": "original procedural arrangement"
+  }
+]

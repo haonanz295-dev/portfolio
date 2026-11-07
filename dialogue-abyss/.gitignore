@@ -1,0 +1,6 @@
+**/backend/data/
+**/.godot/
+**/__pycache__/
+*.pyc
+.env
+*.log

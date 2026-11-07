@@ -1,0 +1,228 @@
+{
+  "version": "0.4",
+  "provenance": "PROVENANCE.md",
+  "files": [
+    {
+      "path": "art/ocean-keyart.png",
+      "bytes": 1918917,
+      "sha256": "2d967cfb1fce8c1e179c78fa0da41088fe9f48f84190c198944c8a464ea6182b",
+      "category": "art"
+    },
+    {
+      "path": "audio/arrangement.json",
+      "bytes": 1495,
+      "sha256": "0e6391398ff0286daaece9453dd41e027b1e072003623dbe37ea223236df581f",
+      "category": "audio"
+    },
+    {
+      "path": "audio/beds/canyon.wav",
+      "bytes": 9737324,
+      "sha256": "613907107215a2aac6b277cf75856f64c77e580f8e45fb241513aeeed4c41419",
+      "category": "audio"
+    },
+    {
+      "path": "audio/beds/garden.wav",
+      "bytes": 8043884,
+      "sha256": "9f08b1a9dbbc86b09ecdf1f7c7adb317295c031e154ef89de6c553bb8c5ad431",
+      "category": "audio"
+    },
+    {
+      "path": "audio/beds/jelly.wav",
+      "bytes": 10160684,
+      "sha256": "7c9dbdc7fe9a26c4b4eb487eb60c91eb5a805ccdf8b5b084b04115b7b86c0859",
+      "category": "audio"
+    },
+    {
+      "path": "audio/beds/shallow.wav",
+      "bytes": 8890604,
+      "sha256": "8bc6cc2d66ca7eba41d61142f6045c343a4651e051f4fc971809d9cc2d68a11d",
+      "category": "audio"
+    },
+    {
+      "path": "audio/beds/sunset.wav",
+      "bytes": 10584044,
+      "sha256": "e7a5e45ad33c751ca2464ea283123fbce0961ed7391c64c2ef27014351f3b27e",
+      "category": "audio"
+    },
+    {
+      "path": "audio/beds/whale.wav",
+      "bytes": 11854124,
+      "sha256": "23ac0228e6414e477da557c686368d0ba3fcb53ff68d329ff10af280290cb2c4",
+      "category": "audio"
+    },
+    {
+      "path": "audio/effects/bell.wav",
+      "bytes": 70604,
+      "sha256": "cac5fa959c33ca53a729d9d9eba8ad796f10e983693808ec40ac97f2c7999ed6",
+      "category": "audio"
+    },
+    {
+      "path": "audio/effects/bubble.wav",
+      "bytes": 26504,
+      "sha256": "b26ef777c32013f21625f6a1d4b2a2693d80e0ebec42a69eeaf668c79565169b",
+      "category": "audio"
+    },
+    {
+      "path": "audio/effects/ray.wav",
+      "bytes": 57374,
+      "sha256": "2a8e2355738cc643b37be102eb16685f3ff8ea2759c141e2b053c278c992d608",
+      "category": "audio"
+    },
+    {
+      "path": "audio/effects/sonar.wav",
+      "bytes": 79424,
+      "sha256": "c6a5361145773af0b0c599315c23f3dc91afc86799ac6d2b85d0970ce2bdcc09",
+      "category": "audio"
+    },
+    {
+      "path": "audio/effects/whale.wav",
+      "bytes": 176444,
+      "sha256": "326496f1e1827d528c34631d8890b0e86efc8b88e47e05cf6e28fe9e14fa69eb",
+      "category": "audio"
+    },
+    {
+      "path": "audio/music/canyon.wav",
+      "bytes": 9737324,
+      "sha256": "4e9c224429ab50cce97c0c1ba4afd6f7ae0fb292ff496937c6e48f31f0a2f869",
+      "category": "audio"
+    },
+    {
+      "path": "audio/music/garden.wav",
+      "bytes": 8043884,
+      "sha256": "465d868b5f3ebd4caef9941af8395f35ce6afd6541f91576f6c3279bc17294d5",
+      "category": "audio"
+    },
+    {
+      "path": "audio/music/jelly.wav",
+      "bytes": 10160684,
+      "sha256": "2889de5abdbd1a074c98a1cf6a8c30ae0cf3405f368560bdc26dbf71b966a938",
+      "category": "audio"
+    },
+    {
+      "path": "audio/music/shallow.wav",
+      "bytes": 8890604,
+      "sha256": "d89cf32052f335968cb8de223459dfb903b6fddaaa4893ad8fb7dc472af9d6f9",
+      "category": "audio"
+    },
+    {
+      "path": "audio/music/sunset.wav",
+      "bytes": 10584044,
+      "sha256": "2cca2170f494fc572fa5cb1963152f77d100c861f0818ef60c20af9490ab8d67",
+      "category": "audio"
+    },
+    {
+      "path": "audio/music/whale.wav",
+      "bytes": 11854124,
+      "sha256": "d52fef03af9a66af73c5971088de3701d5244cf14a912be002a5c604f6aa851c",
+      "category": "audio"
+    },
+    {
+      "path": "audio/PROVENANCE.md",
+      "bytes": 1307,
+      "sha256": "245d5d009e247f8fda36831dec181902c996cbcde6aee96c9dc6461e82a9896d",
+      "category": "audio"
+    },
+    {
+      "path": "concepts/creatures-turnaround.png",
+      "bytes": 1685574,
+      "sha256": "8f0c8719815374807edfca7228b5b3888f451f8435c6e124cd82fcc30dcc058a",
+      "category": "concepts"
+    },
+    {
+      "path": "concepts/diver-turnaround.png",
+      "bytes": 1736035,
+      "sha256": "80a7749d33208d3c6738a42c57fce5ce3cedb99afe0525a5ae7cc15cb1631f4a",
+      "category": "concepts"
+    },
+    {
+      "path": "concepts/worlds.png",
+      "bytes": 2421962,
+      "sha256": "03e70828e916ad58f9ad3f496d9ff454345dc7d9dd9e4f19b1bf2c11aca9ad46",
+      "category": "concepts"
+    },
+    {
+      "path": "index.html",
+      "bytes": 4221,
+      "sha256": "dc82d0a6a0c7cbd5b0490a88fd543cc6dc8197ef1fbe32a3a47bdeafb7112745",
+      "category": "index.html"
+    },
+    {
+      "path": "models/diver.gltf",
+      "bytes": 348175,
+      "sha256": "612115e0ad69417e1fedfe2f5e989d2619fd79267ed66d3a9dfc95429a58aa49",
+      "category": "models"
+    },
+    {
+      "path": "models/jelly.gltf",
+      "bytes": 61638,
+      "sha256": "363e3e674f6e07ab2e7e6f66b502090314bfdf6400865a43d9671c3eb0fc27b4",
+      "category": "models"
+    },
+    {
+      "path": "models/octopus.gltf",
+      "bytes": 100764,
+      "sha256": "3eae2725fdd0f275093f121b2a0fed033b142deb6a6f5b90bbc2d625419efc00",
+      "category": "models"
+    },
+    {
+      "path": "models/ray.gltf",
+      "bytes": 73421,
+      "sha256": "dc9c9ef3cdc00b61ecfa0188de71835be718d89757935613dc74ad2c5a4da008",
+      "category": "models"
+    },
+    {
+      "path": "models/seahorse.gltf",
+      "bytes": 106187,
+      "sha256": "542ac2567be24af5dc9670ba160143a4e3c2fed65a3b5dc4a423ac6501affe30",
+      "category": "models"
+    },
+    {
+      "path": "models/shark.gltf",
+      "bytes": 100809,
+      "sha256": "a68ed9b1a827f6d3c3916c5139a01cc7d9ce5b8e606e00ea6938e04727642f8a",
+      "category": "models"
+    },
+    {
+      "path": "models/starfish.gltf",
+      "bytes": 62399,
+      "sha256": "94e3cee97c7ab182b82f98791419f347919565d7a392a3d2cdca532c127dd6ea",
+      "category": "models"
+    },
+    {
+      "path": "models/whale.gltf",
+      "bytes": 129149,
+      "sha256": "451bfdc57e7ac74599442bfb5fdf796296535c50e2622fa20491c26fe953e46f",
+      "category": "models"
+    },
+    {
+      "path": "PROVENANCE.md",
+      "bytes": 1804,
+      "sha256": "e048da5501b48f0a6a47f827f4692a2a9dc14569761b5e965c1f736918fb177c",
+      "category": "PROVENANCE.md"
+    },
+    {
+      "path": "ui/abyss-mark.svg",
+      "bytes": 328,
+      "sha256": "862e49ea202e4b925223efd9dd44bd0ba292529a698805ac4605fe5c9aa8a83e",
+      "category": "ui"
+    },
+    {
+      "path": "ui/camera.svg",
+      "bytes": 237,
+      "sha256": "4534a9bdf2dab4d004f7e54a46cb2f878596bb7cca8e68feb1142e5e5e48d984",
+      "category": "ui"
+    },
+    {
+      "path": "ui/compass.svg",
+      "bytes": 240,
+      "sha256": "35dcd879326d549f80177784d29b41d55b6918b3fd066fb8b785d58f9fb0a86a",
+      "category": "ui"
+    },
+    {
+      "path": "ui/menu.svg",
+      "bytes": 180,
+      "sha256": "6a050026af6e3d40e4f02afb9e1a22ab36de50602296170549d8b57a82174d85",
+      "category": "ui"
+    }
+  ]
+}
