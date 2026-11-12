@@ -1,0 +1,34 @@
+/* One owner for chapter lifecycle: blackout -> bounded preparation -> story -> blackout -> world. */
+(()=>{'use strict';
+const g=window.seaGame,P=window.AbyssPresentation,C=window.AbyssContent,$=s=>document.querySelector(s);if(!g||!P)return;
+const root=document.createElement('dialog');root.id='cinema';root.setAttribute('aria-label','Chapter transition');root.innerHTML=`<section id="cinema-scene"><video id="cinema-video" playsinline muted hidden></video><div class="cinema-shade"></div><div id="cinema-heading"><small id="cinema-number"></small><h2 id="cinema-title"></h2><p id="cinema-theme"></p></div><div id="cinema-bubble" role="status" aria-live="polite"><span id="cinema-speaker"></span><p id="cinema-line"></p></div><div id="cinema-controls"><span id="cinema-status"></span><div><button id="cinema-pause"></button><button id="cinema-skip" class="primary"></button></div></div></section><section id="cinema-loading" hidden><div class="tide-spinner" aria-hidden="true"></div><p id="cinema-loading-label" role="status"></p></section>`;document.body.append(root);
+const video=$('#cinema-video'),seen=new Set(),history=[];let busy=false,target=-1,pending=null,state='idle',stateStart=performance.now(),elapsed=0,readPause=false,skip=false,line=-1,currentMedia=null,frame=0,voiceAudio=null,latestPromise=Promise.resolve(),releaseStory=null;
+const sleep=ms=>new Promise(r=>setTimeout(r,ms));
+function setState(next){const now=performance.now();if(state!=='idle')history.push({state,target,duration:Math.round(now-stateStart)});if(history.length>100)history.shift();state=next;stateStart=now;root.dataset.state=next;}
+function stopVoice(){P.stopVoice();if(voiceAudio){voiceAudio.pause();voiceAudio=null}}
+function updateText(){const c=C.chapters[P.settings.language][target];if(!c)return;$('#cinema-title').textContent=c[0];$('#cinema-theme').textContent=c[1];$('#cinema-number').textContent=`${String(target+1).padStart(2,'0')} / 06`;$('#cinema-loading-label').textContent=P.text('loading');$('#cinema-pause').textContent=P.text(readPause?'resume':'pause');$('#cinema-skip').textContent=P.text('skip');$('#cinema-status').textContent=currentMedia?P.text('note'):P.text('fallback');if(line>=0){$('#cinema-speaker').textContent=c[line+4];$('#cinema-line').textContent=c[line+2]}}
+function caption(index){line=index;updateText();stopVoice();if(!P.settings.voiceEnabled)return;const role=index===0?'diver':C.kinds[target],c=C.chapters[P.settings.language][target];const asset=window.AbyssMedia[target].voice?.[P.settings.language]?.[index===0?P.settings.voice:role];
+ if(asset){voiceAudio=new Audio(asset);voiceAudio.volume=.8;voiceAudio.play().catch(()=>P.speak(c[index+2],role))}else P.speak(c[index+2],role);
+}
+async function prepare(index){const m=window.AbyssMedia[index];currentMedia=null;video.hidden=true;video.pause();video.removeAttribute('src');video.load();if(!m.video)return;
+ let done;const ready=new Promise(resolve=>{done=resolve;video.oncanplay=()=>resolve(true);video.onerror=()=>resolve(false)});video.src=m.video;video.load();const loaded=await Promise.race([ready,sleep(1700).then(()=>false)]);video.oncanplay=video.onerror=null;done(false);
+ if(loaded){currentMedia=m;video.hidden=false}else{video.removeAttribute('src');video.load()}
+}
+function finishStory(){skip=true;stopVoice();video.pause();releaseStory?.();}
+function togglePause(){if(state!=='story')return;readPause=!readPause;if(readPause){video.pause();speechSynthesis?.pause();voiceAudio?.pause();g.audio.pause(true)}else{if(currentMedia)video.play().catch(()=>{currentMedia=null;video.hidden=true;updateText()});speechSynthesis?.resume();voiceAudio?.play().catch(()=>{});g.audio.pause(false)}updateText()}
+$('#cinema-skip').onclick=finishStory;$('#cinema-pause').onclick=togglePause;root.addEventListener('cancel',e=>{e.preventDefault();if(state==='story')finishStory()});
+document.addEventListener('visibilitychange',()=>{if(document.hidden&&state==='story'&&!readPause)togglePause()});
+addEventListener('abyss-presentation-change',()=>{if(busy){stopVoice();updateText()}});
+async function story(seconds){setState('story');elapsed=0;readPause=false;skip=false;line=-1;updateText();root.classList.add('reveal');if(currentMedia){try{await video.play()}catch{currentMedia=null;video.hidden=true;updateText()}}
+ $('#cinema-skip').focus();let previous=performance.now();await new Promise(resolve=>{releaseStory=resolve;function tick(now){if(skip){resolve();return}const dt=Math.min((now-previous)/1000,.1);previous=now;if(!readPause&&!document.hidden){elapsed+=dt;const n=elapsed<seconds*.48?0:1;if(n!==line)caption(n);if(elapsed>=seconds){resolve();return}}frame=requestAnimationFrame(tick)}frame=requestAnimationFrame(tick)});cancelAnimationFrame(frame);releaseStory=null;stopVoice();video.pause();
+}
+async function perform(index,options){target=index;skip=false;line=-1;elapsed=0;g.prepareTransition?.();g.close();g.lockTransition(true);document.body.classList.add('cinema-active');root.style.opacity='0';root.showModal();root.classList.remove('reveal');$('#cinema-scene').hidden=true;$('#cinema-loading').hidden=true;setState('fade-out');g.audio.setDucking?.(.3);await new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r)));root.style.opacity='1';await sleep(P.settings.reduce?120:550);
+ setState('loading');$('#cinema-loading').hidden=false;updateText();await Promise.all([prepare(index),sleep(650)]);$('#cinema-loading').hidden=true;$('#cinema-scene').hidden=false;updateText();
+ const full=options.opening||P.settings.replay||!seen.has(index);const seconds=full?Math.min(20,C.durations[index]):2;
+ g.audio.pause(false);await story(seconds);setState('fade-in');root.classList.remove('reveal');await sleep(P.settings.reduce?120:550);g.commitRegion(index);seen.add(index);root.style.opacity='0';await sleep(P.settings.reduce?120:800);root.close();document.body.classList.remove('cinema-active');
+}
+function request(index,options={}){if(!Number.isInteger(index)||index<0||index>=g.regions.length)return Promise.resolve(false);if(busy){pending={index,options};return latestPromise}busy=true;
+ latestPromise=(async()=>{let next={index,options};try{while(next){pending=null;await perform(next.index,next.options);next=pending}}catch(err){console.error('Chapter transition:',err);g.toast(P.text('error'))}finally{pending=null;busy=false;cancelAnimationFrame(frame);releaseStory=null;stopVoice();video.pause();root.close();root.classList.remove('reveal');document.body.classList.remove('cinema-active');g.lockTransition(false);g.audio.setDucking?.(1);g.audio.pause(document.hidden);setState('idle');}return true})();return latestPromise;
+}
+window.AbyssCinema={request,diagnostics:()=>({busy,target,state,elapsed,readPause,media:currentMedia?'video':'prologue',pending:pending?.index??null,history:[...history]})};
+})();

@@ -1,0 +1,95 @@
+{
+  "passed": true,
+  "errors": [],
+  "diag": {
+    "busy": false,
+    "target": 5,
+    "state": "idle",
+    "elapsed": 0.2577000000000007,
+    "readPause": false,
+    "media": "prologue",
+    "pending": null,
+    "history": [
+      {
+        "state": "fade-out",
+        "target": 0,
+        "duration": 588
+      },
+      {
+        "state": "loading",
+        "target": 0,
+        "duration": 661
+      },
+      {
+        "state": "story",
+        "target": 0,
+        "duration": 392
+      },
+      {
+        "state": "fade-in",
+        "target": 0,
+        "duration": 1430
+      },
+      {
+        "state": "fade-out",
+        "target": 2,
+        "duration": 578
+      },
+      {
+        "state": "loading",
+        "target": 2,
+        "duration": 658
+      },
+      {
+        "state": "story",
+        "target": 2,
+        "duration": 468
+      },
+      {
+        "state": "fade-in",
+        "target": 2,
+        "duration": 1468
+      },
+      {
+        "state": "fade-out",
+        "target": 1,
+        "duration": 592
+      },
+      {
+        "state": "loading",
+        "target": 1,
+        "duration": 650
+      },
+      {
+        "state": "story",
+        "target": 1,
+        "duration": 57
+      },
+      {
+        "state": "fade-in",
+        "target": 5,
+        "duration": 1455
+      },
+      {
+        "state": "fade-out",
+        "target": 5,
+        "duration": 584
+      },
+      {
+        "state": "loading",
+        "target": 5,
+        "duration": 653
+      },
+      {
+        "state": "story",
+        "target": 5,
+        "duration": 267
+      },
+      {
+        "state": "fade-in",
+        "target": 5,
+        "duration": 1413
+      }
+    ]
+  }
+}

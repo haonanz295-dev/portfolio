@@ -79,7 +79,7 @@ class Handler(BaseHTTPRequestHandler):
 
     def do_GET(self):
         path=unquote(urlparse(self.path).path)
-        if path=='/api/health':return self.reply(200,{'ok':True,'version':'0.4','setup':AUTH is None})
+        if path=='/api/health':return self.reply(200,{'ok':True,'version':'0.6','setup':AUTH is None})
         if path.startswith('/api/admin/'):
             if not self.authorized():return self.reply(401,{'error':'请先登录发布者后台'})
             with conn() as c:
@@ -231,3 +231,4 @@ if __name__=='__main__':
     AUTH=init()
     print(f'Game: http://{args.host}:{args.port}/\nPublisher: http://{args.host}:{args.port}/admin\nKeep this window open. Ctrl+C stops the service.',flush=True)
     ThreadingHTTPServer((args.host,args.port),Handler).serve_forever()
+

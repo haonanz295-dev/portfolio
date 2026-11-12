@@ -1,0 +1,166 @@
+{
+  "status": "PASS",
+  "date": "2026-11-12T04:36:10.104Z",
+  "checks": [
+    "Onboarding, questionnaire, neutral preference result and default no upload",
+    "Real keyboard swimming",
+    "Articulated raise, seven NPC species, fixed seaweed roots and bubble cap",
+    "Six regions: 180 swept movement steps per arch collision without penetration",
+    "Six selectable swimming companions; three-gate race completes",
+    "Hide-and-seek completes when participant and NPC reach target",
+    "Three real-time listen-and-answer rounds complete",
+    "Three flowers, six need-specific actions, result and journey tracking",
+    "Guide moves through collision API; movement key cancels",
+    "Five photo presets, 55m distance, 100-degree FOV, pure PNG export and Escape",
+    "Journey includes all four games; ending and restart work",
+    "Six-region rebuilding and rendering without browser script exceptions"
+  ],
+  "collisions": [
+    {
+      "region": 0,
+      "clear": true,
+      "stopped": true,
+      "hits": 790,
+      "position": [
+        -17,
+        3.157204280143151,
+        -8.915000023841857
+      ],
+      "box": {
+        "label": "arch-pillar",
+        "min": [
+          -18.364899039268494,
+          -1,
+          -13.261356472969055
+        ],
+        "max": [
+          -15.635100960731506,
+          6,
+          -10.600000023841858
+        ]
+      }
+    },
+    {
+      "region": 1,
+      "clear": true,
+      "stopped": true,
+      "hits": 957,
+      "position": [
+        -17,
+        3,
+        -8.915000023841857
+      ],
+      "box": {
+        "label": "arch-pillar",
+        "min": [
+          -18.364899039268494,
+          -1,
+          -13.261356472969055
+        ],
+        "max": [
+          -15.635100960731506,
+          6,
+          -10.600000023841858
+        ]
+      }
+    },
+    {
+      "region": 2,
+      "clear": true,
+      "stopped": true,
+      "hits": 1132,
+      "position": [
+        -17,
+        3,
+        -7.7936236224699735
+      ],
+      "box": {
+        "label": "arch-pillar",
+        "min": [
+          -18.364899039268494,
+          -1,
+          -13.261356472969055
+        ],
+        "max": [
+          -15.635100960731506,
+          6,
+          -10.600000023841858
+        ]
+      }
+    },
+    {
+      "region": 3,
+      "clear": true,
+      "stopped": false,
+      "hits": 1285,
+      "position": [
+        -16.90045271607996,
+        3,
+        -17.284894899826416
+      ],
+      "box": {
+        "label": "arch-pillar",
+        "min": [
+          -18.364899039268494,
+          -1,
+          -13.261356472969055
+        ],
+        "max": [
+          -15.635100960731506,
+          6,
+          -10.600000023841858
+        ]
+      }
+    },
+    {
+      "region": 4,
+      "clear": true,
+      "stopped": true,
+      "hits": 1465,
+      "position": [
+        -16.544160337920324,
+        4.428026524852389,
+        -8.919407393546749
+      ],
+      "box": {
+        "label": "arch-pillar",
+        "min": [
+          -18.364899039268494,
+          -1,
+          -13.261356472969055
+        ],
+        "max": [
+          -15.635100960731506,
+          6,
+          -10.600000023841858
+        ]
+      }
+    },
+    {
+      "region": 5,
+      "clear": true,
+      "stopped": true,
+      "hits": 1645,
+      "position": [
+        -17,
+        3,
+        -1.5099450266872432
+      ],
+      "box": {
+        "label": "arch-pillar",
+        "min": [
+          -18.364899039268494,
+          -1,
+          -13.261356472969055
+        ],
+        "max": [
+          -15.635100960731506,
+          6,
+          -10.600000023841858
+        ]
+      }
+    }
+  ],
+  "consoleErrors": [],
+  "note": "Minigame target tests position the diver at targets; keyboard swimming and collision sweeping tested independently."
+}

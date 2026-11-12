@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "checks": [
+    "Unauthenticated admin API denied; source / database / credentials excluded from static routes",
+    "Publisher login and same-origin mutation check",
+    "Consented session / aggregate events / feedback persist; unknown personal fields excluded; tier recomputed",
+    "Content draft creation / editing; authenticated asset upload and byte-for-byte download; unsupported executable content denied",
+    "Participant deletion; owner content / asset deletion; logout invalidates token"
+  ]
+}

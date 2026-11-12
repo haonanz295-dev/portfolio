@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "checks": [
+    "quiet alternative unlocks after stable 15s",
+    "new chapter resets",
+    "RPS near companion, pauses and resumes",
+    "Escape restores input",
+    "heartbeat audio off by default",
+    "seven model studio renders"
+  ],
+  "errors": []
+}

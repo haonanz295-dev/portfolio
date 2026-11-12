@@ -1,5 +1,5 @@
 {
-  "version": "0.4",
+  "version": "0.6",
   "provenance": "PROVENANCE.md",
   "files": [
     {
@@ -123,6 +123,12 @@
       "category": "audio"
     },
     {
+      "path": "cinematics/manifest.js",
+      "bytes": 243,
+      "sha256": "d2a5ec9413c701564abe6f31d3ef6f9d6651678c6f5aa897b83911cc4c84262f",
+      "category": "cinematics"
+    },
+    {
       "path": "concepts/creatures-turnaround.png",
       "bytes": 1685574,
       "sha256": "8f0c8719815374807edfca7228b5b3888f451f8435c6e124cd82fcc30dcc058a",
@@ -148,56 +154,98 @@
     },
     {
       "path": "models/diver.gltf",
-      "bytes": 348175,
-      "sha256": "612115e0ad69417e1fedfe2f5e989d2619fd79267ed66d3a9dfc95429a58aa49",
+      "bytes": 1216589,
+      "sha256": "25df92881685507e01105444b123ef98e3977d00b0a680c61e91ca9606ac3766",
       "category": "models"
     },
     {
       "path": "models/jelly.gltf",
-      "bytes": 61638,
-      "sha256": "363e3e674f6e07ab2e7e6f66b502090314bfdf6400865a43d9671c3eb0fc27b4",
+      "bytes": 329858,
+      "sha256": "8768a3ce1544d0cbae4691a0aa88717f15ab2246381ff585468298ae14d575f4",
       "category": "models"
     },
     {
       "path": "models/octopus.gltf",
-      "bytes": 100764,
-      "sha256": "3eae2725fdd0f275093f121b2a0fed033b142deb6a6f5b90bbc2d625419efc00",
+      "bytes": 1728637,
+      "sha256": "262c810a37c637e63a74d014aeddd65233806a9a1a8b4916fac2fefb139a9316",
       "category": "models"
     },
     {
       "path": "models/ray.gltf",
-      "bytes": 73421,
-      "sha256": "dc9c9ef3cdc00b61ecfa0188de71835be718d89757935613dc74ad2c5a4da008",
+      "bytes": 860724,
+      "sha256": "d50a5f369a679586f09403989c427d5bbf533ac5abcb48079127bba66beebbff",
       "category": "models"
     },
     {
       "path": "models/seahorse.gltf",
-      "bytes": 106187,
-      "sha256": "542ac2567be24af5dc9670ba160143a4e3c2fed65a3b5dc4a423ac6501affe30",
+      "bytes": 561366,
+      "sha256": "de46f09b883d407788ae0114e513906f8b7b4d43b882f32b76bcd66e05cae7b8",
       "category": "models"
     },
     {
       "path": "models/shark.gltf",
-      "bytes": 100809,
-      "sha256": "a68ed9b1a827f6d3c3916c5139a01cc7d9ce5b8e606e00ea6938e04727642f8a",
+      "bytes": 659885,
+      "sha256": "dddd334420fc970f13314882206ece4c84a4e55620d8e9497cca00b927fb5030",
       "category": "models"
     },
     {
       "path": "models/starfish.gltf",
-      "bytes": 62399,
-      "sha256": "94e3cee97c7ab182b82f98791419f347919565d7a392a3d2cdca532c127dd6ea",
+      "bytes": 173513,
+      "sha256": "f58817402d18e28dddc9cdca916e90db37e51be78179a068f1f956d257f6a965",
       "category": "models"
     },
     {
       "path": "models/whale.gltf",
-      "bytes": 129149,
-      "sha256": "451bfdc57e7ac74599442bfb5fdf796296535c50e2622fa20491c26fe953e46f",
+      "bytes": 559000,
+      "sha256": "01285703796e7c29b1021487858e8d2d19f69082adcbe5a3aff030e6ef90cfcb",
       "category": "models"
     },
     {
+      "path": "previews/model-jelly.png",
+      "bytes": 127688,
+      "sha256": "13eb31b4965370e49a45e178912854e64a108db7190cee2a0a8ec1e046297199",
+      "category": "previews"
+    },
+    {
+      "path": "previews/model-octopus.png",
+      "bytes": 89810,
+      "sha256": "5dd38c431519d41541966e2db4421c9613b145d6eb6099c3f5bd20cc627fe9a0",
+      "category": "previews"
+    },
+    {
+      "path": "previews/model-ray.png",
+      "bytes": 69395,
+      "sha256": "f45d8fd06bb556c1e9f9541838bfd18763f77bb16427a1bbbbdf65a6c2c7d418",
+      "category": "previews"
+    },
+    {
+      "path": "previews/model-seahorse.png",
+      "bytes": 59806,
+      "sha256": "a26cf0eb0620a63ff45fd9bf4065a0dcd0ce2678a318f32a6e83f17cba908eee",
+      "category": "previews"
+    },
+    {
+      "path": "previews/model-shark.png",
+      "bytes": 83741,
+      "sha256": "baa29c7f03f86ad1c4ee2eb9d5da550328cff473162d5e3208f3bc8cc53423b0",
+      "category": "previews"
+    },
+    {
+      "path": "previews/model-starfish.png",
+      "bytes": 72296,
+      "sha256": "e736c03b5812c09013f062a9f40fbf409d293c4b61e4ee53186bcf6ec0038c89",
+      "category": "previews"
+    },
+    {
+      "path": "previews/model-whale.png",
+      "bytes": 93323,
+      "sha256": "553ee3884e2ac51b91b5681db8f385d97e5d2cf4568c74a5a4dd51bfd5ddf6db",
+      "category": "previews"
+    },
+    {
       "path": "PROVENANCE.md",
-      "bytes": 1804,
-      "sha256": "e048da5501b48f0a6a47f827f4692a2a9dc14569761b5e965c1f736918fb177c",
+      "bytes": 2140,
+      "sha256": "a3f3b24b2395718414f1c4bb7ae892d0dd61f3a3377a477a589a2c14f6456c0a",
       "category": "PROVENANCE.md"
     },
     {
