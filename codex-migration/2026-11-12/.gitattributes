@@ -1,0 +1,3 @@
+skills-backup.zip.part-* -text
+*.xlsx -text
+*.py text eol=lf

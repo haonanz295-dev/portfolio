@@ -1,0 +1,9 @@
+{
+  "files": 16993,
+  "uncompressed_bytes": 178781956,
+  "zip_bytes": 135234752,
+  "zip_sha256": "8d17050eee864d8f892b33366e0a42767dc70a8acbd371dff98c196c2e9319c1",
+  "excluded": [],
+  "credential_pattern_matches": 0,
+  "limitations": "Pattern scan is not a guarantee of absence of sensitive data. Excludes credentials, binaries, caches and system skills."
+}

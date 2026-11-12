@@ -1,0 +1,25 @@
+{
+  "zip_sha256": "8d17050eee864d8f892b33366e0a42767dc70a8acbd371dff98c196c2e9319c1",
+  "parts": [
+    {
+      "name": "skills-backup.zip.part-01",
+      "sha256": "1e93ddde50caaf26cf42d4bc89d62bed38bba1292d8987fa785959788ed6f31f",
+      "bytes": 45000000
+    },
+    {
+      "name": "skills-backup.zip.part-02",
+      "sha256": "3057c2de1d96d3ebd251ed1885bc26d639c15d86c8a5daf46ada3e1a6babc0e1",
+      "bytes": 45000000
+    },
+    {
+      "name": "skills-backup.zip.part-03",
+      "sha256": "8a8d245ea9525941f7bddee29c84ac84991d5a920a0d325c3be70b7448cba791",
+      "bytes": 45000000
+    },
+    {
+      "name": "skills-backup.zip.part-04",
+      "sha256": "9b511a1d8591ee01daac914a306b790d06d87f7ecd7a3f9c5dac0ad32fdaca5c",
+      "bytes": 234752
+    }
+  ]
+}
