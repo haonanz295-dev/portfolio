@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "checks": [
+    "Desktop cursor normal/hover/down states; modal entrance and exit cleanup; decorative icons hidden from AT",
+    "Reduced-motion disables custom cursor and icon motion live",
+    "Keyboard action feedback, photo shutter and return to gameplay",
+    "Touch entry has native cursor and working settings"
+  ],
+  "consoleErrors": [],
+  "date": "2026-11-12T05:06:15.874Z"
+}

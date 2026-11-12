@@ -20,3 +20,6 @@ Original stylized 3D underwater adventure game key art, matte sculpted shapes, s
 
 ## v0.6 模型修订
 2026-11-12：七种动物由 sculpted-models.js 原创生成，潜水员新增装备细节；所有 models/*.gltf 已重新导出。模型使用层级关节，尚不含蒙皮骨骼动画、LOD或完整精修UV。模型工作室使用本地实时三点布光，不是离线渲染短片。
+
+## v0.6.1 动效素材
+21种独立SVG图标、三种SVG光标及CSS动画由本项目原创代码生成。实际动画来自 ui-motion.css / ui-motion.js；独立SVG是可复用静态矢量源。无外部字体或商业游戏素材。

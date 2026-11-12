@@ -1,0 +1,33 @@
+/* Shared motion language: buoyant entrance, gentle response, immediate controls. */
+:root{--motion-ease:cubic-bezier(.2,.75,.25,1);--motion-enter:280ms;--motion-exit:150ms}
+.ocean-icon{width:21px;height:21px;vertical-align:middle;margin-right:8px;display:inline-block;overflow:visible;fill:none;stroke:currentColor;stroke-width:1.55;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0;pointer-events:none}.ocean-icon *{transform-box:fill-box;transform-origin:center}#menu{background-image:none!important}#menu .ocean-icon{margin:0;width:24px;height:24px}button{position:relative;transition:background 160ms,border-color 160ms,box-shadow 180ms,transform 160ms var(--motion-ease)}button:focus-visible{box-shadow:0 0 0 5px #dddbb820}button:hover .ocean-icon,button:focus-visible .ocean-icon{color:#f3dca2}
+.motion-enter:not(#cinema){animation:float-in var(--motion-enter) var(--motion-ease) both}.motion-ghost{animation:float-out var(--motion-exit) ease-in both!important}.motion-enter .grid>button,.motion-enter .row>button{animation:content-rise 260ms var(--motion-ease) both}.motion-enter .grid>button:nth-child(2n){animation-delay:35ms}.motion-enter .grid>button:nth-child(n+3){animation-delay:65ms}
+@keyframes float-in{from{opacity:0;translate:0 12px;scale:.985}to{opacity:1;translate:0 0;scale:1}}@keyframes float-out{to{opacity:0;translate:0 8px;scale:.985}}@keyframes content-rise{from{opacity:0;translate:0 6px}to{opacity:1;translate:0 0}}
+button:is(:hover,:focus-visible) .needle{animation:needle-settle 650ms var(--motion-ease)}@keyframes needle-settle{30%{rotate:24deg}65%{rotate:-8deg}to{rotate:0deg}}
+button:is(:hover,:focus-visible) .lens{animation:lens-focus 550ms var(--motion-ease)}@keyframes lens-focus{45%{scale:.76}to{scale:1}}
+button:is(:hover,:focus-visible) .sonar-wave{animation:sonar-once 800ms ease-out}.sonar-wave.outer{animation-delay:80ms!important}@keyframes sonar-once{from{scale:.55;opacity:.1}45%{opacity:1}to{scale:1.15;opacity:.5}}
+button:is(:hover,:focus-visible) .page-left{animation:page-open 600ms var(--motion-ease)}button:is(:hover,:focus-visible) .page-right{animation:page-open 600ms var(--motion-ease) reverse}@keyframes page-open{50%{scale:.72 1;rotate:-7deg}}
+button:is(:hover,:focus-visible) .gear-body{animation:gear-buoy 600ms ease-in-out}@keyframes gear-buoy{50%{translate:0 -2px;rotate:-5deg}}
+button:is(:hover,:focus-visible) .bubble-one,button:is(:hover,:focus-visible) .bubble-two{animation:bubble-rise 650ms ease-out}.bubble-two{animation-delay:80ms!important}@keyframes bubble-rise{50%{translate:0 -3px;scale:1.08}to{translate:0 0}}
+button:is(:hover,:focus-visible) .music-note{animation:note-sway 600ms ease-in-out}@keyframes note-sway{30%{rotate:-10deg}65%{rotate:8deg}}
+button:is(:hover,:focus-visible) .menu-top{animation:menu-slide 550ms ease-out}button:is(:hover,:focus-visible) .menu-bottom{animation:menu-slide 550ms ease-out reverse}@keyframes menu-slide{50%{translate:3px 0}}
+button:is(:hover,:focus-visible) .greeting{animation:hand-wave 700ms ease-in-out;transform-origin:50% 90%}@keyframes hand-wave{25%{rotate:12deg}65%{rotate:-10deg}}
+button:is(:hover,:focus-visible) .fish-one{animation:fish-glide 650ms ease-out}@keyframes fish-glide{45%{translate:3px -1px}}
+button:is(:hover,:focus-visible) .rest-sun{animation:sun-breathe 700ms ease-in-out}@keyframes sun-breathe{50%{scale:1.12;opacity:.6}}
+button:is(:hover,:focus-visible) .spin-arc{animation:turn-once 700ms var(--motion-ease)}@keyframes turn-once{to{rotate:360deg}}
+button:is(:hover,:focus-visible) .heart-line{animation:heart-once 650ms ease-in-out}@keyframes heart-once{25%{scale:1.12}50%{scale:.96}70%{scale:1.05}}
+button:is(:hover,:focus-visible) .chat-dots{animation:chat-reply 650ms ease-in-out}@keyframes chat-reply{45%{translate:0 -2px;opacity:.5}}
+button:is(:hover,:focus-visible) .back-arrow{animation:back-current 550ms ease-out}@keyframes back-current{45%{translate:-3px 0}}
+button:is(:hover,:focus-visible) .play-arrow{animation:play-current 550ms ease-out}@keyframes play-current{45%{translate:2px 0}}
+button:is(:hover,:focus-visible) .save-mark{animation:save-settle 550ms ease-out}@keyframes save-settle{40%{translate:0 2px}}
+button:is(:hover,:focus-visible) .profile-head{animation:profile-nod 600ms ease-in-out}@keyframes profile-nod{50%{translate:0 2px;rotate:-5deg}}
+button:is(:hover,:focus-visible) .shell-body{animation:shell-listen 700ms ease-in-out}@keyframes shell-listen{50%{scale:1.08;rotate:6deg}}
+button:is(:hover,:focus-visible) .petals{animation:flower-open 700ms ease-out}@keyframes flower-open{50%{scale:1.15;rotate:12deg}}
+button:is(:hover,:focus-visible) .moon-body{animation:moon-drift 700ms ease-in-out}@keyframes moon-drift{50%{rotate:-12deg;translate:0 -1px}}
+button.motion-feedback>.ocean-icon{animation:icon-confirm 380ms var(--motion-ease)}@keyframes icon-confirm{35%{scale:.84}70%{scale:1.1}to{scale:1}}
+.camera-exposure{position:fixed;inset:0;z-index:2147483646;pointer-events:none;background:#e9f0dd;animation:camera-exposure 220ms ease-out forwards}@keyframes camera-exposure{from{opacity:.12}to{opacity:0}}
+.cursor-bubble{position:fixed;width:5px;height:5px;border:1px solid #d0eddf88;border-radius:50%;z-index:9999;pointer-events:none;animation:cursor-drift 600ms ease-out forwards}@keyframes cursor-drift{from{opacity:.55;translate:-50% -50%}to{opacity:0;translate:-50% -18px;scale:1.5}}
+body.ocean-pointer,body.ocean-pointer #world{cursor:url('assets/ui/cursor-swim.svg') 8 6,auto}body.ocean-pointer :is(button,a,select,input[type=checkbox],input[type=range]){cursor:url('assets/ui/cursor-invite.svg') 16 16,pointer}body.ocean-pointer.pointer-pressed :is(button,a){cursor:url('assets/ui/cursor-press.svg') 16 16,pointer}body.ocean-pointer :is(textarea,input:not([type=range]):not([type=checkbox])){cursor:text}body.ocean-pointer :disabled{cursor:not-allowed}
+body.motion-reduced .ocean-icon,body.motion-reduced .ocean-icon *,body.motion-reduced .motion-enter,body.motion-reduced .motion-feedback,body.motion-reduced .motion-enter .grid>button,body.motion-reduced .motion-enter .row>button{animation:none!important;transition:none!important}body.motion-reduced .touch-ripple,body.motion-reduced .camera-exposure{display:none!important}body.motion-reduced button{transition:none!important;transform:none!important}
+@media(prefers-reduced-motion:reduce){.ocean-icon,.ocean-icon *,.motion-enter,.motion-enter .grid>button,.motion-enter .row>button{animation:none!important}.camera-exposure,.touch-ripple{display:none!important}}
+@media(pointer:coarse){.ocean-icon{width:22px;height:22px}button{min-height:44px}}

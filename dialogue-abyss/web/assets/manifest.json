@@ -1,5 +1,5 @@
 {
-  "version": "0.6",
+  "version": "0.6.1",
   "provenance": "PROVENANCE.md",
   "files": [
     {
@@ -244,8 +244,8 @@
     },
     {
       "path": "PROVENANCE.md",
-      "bytes": 2140,
-      "sha256": "a3f3b24b2395718414f1c4bb7ae892d0dd61f3a3377a477a589a2c14f6456c0a",
+      "bytes": 2379,
+      "sha256": "e0dbb0f4e30573003d73aa24c8086338ca2390558a654a679d5b3924cba8dd17",
       "category": "PROVENANCE.md"
     },
     {
@@ -267,9 +267,153 @@
       "category": "ui"
     },
     {
+      "path": "ui/cursor-invite.svg",
+      "bytes": 298,
+      "sha256": "3cfede5929ef6cc9f803c5de556cb049af8248f6e51a75c2c8bd61867e4ad032",
+      "category": "ui"
+    },
+    {
+      "path": "ui/cursor-press.svg",
+      "bytes": 259,
+      "sha256": "3caea23fb39c8e24751ed07724c2d48593caf261e4f80bd889c5e2a76e23cd1e",
+      "category": "ui"
+    },
+    {
+      "path": "ui/cursor-swim.svg",
+      "bytes": 299,
+      "sha256": "f9d043fdabc9d542041a8ff6d1787c5e10f20b6df40a85c7e43fa16557a53f51",
+      "category": "ui"
+    },
+    {
       "path": "ui/menu.svg",
       "bytes": 180,
       "sha256": "6a050026af6e3d40e4f02afb9e1a22ab36de50602296170549d8b57a82174d85",
+      "category": "ui"
+    },
+    {
+      "path": "ui/motion/back.svg",
+      "bytes": 257,
+      "sha256": "eee42b660bdba931a3bdf326ecf21d2b8208b8f637d08ab9d8ebc112a32713cf",
+      "category": "ui"
+    },
+    {
+      "path": "ui/motion/bubble.svg",
+      "bytes": 305,
+      "sha256": "1f502b2d2489f6b7a6e17b1da576802ac8f843f50cec8624d24600a7ab71b54c",
+      "category": "ui"
+    },
+    {
+      "path": "ui/motion/camera.svg",
+      "bytes": 307,
+      "sha256": "dc317187043e8f59904249bc81938972ef010270a244285494f512735968cb5f",
+      "category": "ui"
+    },
+    {
+      "path": "ui/motion/chat.svg",
+      "bytes": 338,
+      "sha256": "ada9020c0aa1798c56db06cabbfb330183d47656e67e236e92e10f8425165bf2",
+      "category": "ui"
+    },
+    {
+      "path": "ui/motion/compass.svg",
+      "bytes": 284,
+      "sha256": "0324f6292425f1562f584b00c6566f270d4c1d428a30a5c13a1840ac1c526b8d",
+      "category": "ui"
+    },
+    {
+      "path": "ui/motion/flower.svg",
+      "bytes": 330,
+      "sha256": "c5eb8148ad2e139878379b8a16e650bed7d8b2a27b75db2b3c4e30134fdfe536",
+      "category": "ui"
+    },
+    {
+      "path": "ui/motion/follow.svg",
+      "bytes": 322,
+      "sha256": "23b46e1389cf615dbc126ef41bf3f6a80b8642b179f6d9fe1307f2e4fd92c30d",
+      "category": "ui"
+    },
+    {
+      "path": "ui/motion/gear.svg",
+      "bytes": 311,
+      "sha256": "ca84dde9a1639377c9307886dbb2e483f7ea2383ec08fe40fdcf4f4042839399",
+      "category": "ui"
+    },
+    {
+      "path": "ui/motion/heart.svg",
+      "bytes": 259,
+      "sha256": "35a5532c2e0b6e3f7fec5b33b224d11691d759122f6911afb97a44cb2837fa47",
+      "category": "ui"
+    },
+    {
+      "path": "ui/motion/journal.svg",
+      "bytes": 358,
+      "sha256": "4c43aa9723d1a6981ea493f428854277e407a35e805f4abbcdab9eb7f1c64633",
+      "category": "ui"
+    },
+    {
+      "path": "ui/motion/menu.svg",
+      "bytes": 301,
+      "sha256": "1034edc4429b11c43d67a410247eb9475711d1d2703d17e108e608d29b6839f1",
+      "category": "ui"
+    },
+    {
+      "path": "ui/motion/moon.svg",
+      "bytes": 272,
+      "sha256": "d0711da9d391bb215953a3b1d3bc84a136c707176d8ca173ceed790957c4a15b",
+      "category": "ui"
+    },
+    {
+      "path": "ui/motion/music.svg",
+      "bytes": 340,
+      "sha256": "0fd27579cbc6162e639fb39e225e527568bd213fb79849b4d8ac4d046f350860",
+      "category": "ui"
+    },
+    {
+      "path": "ui/motion/play.svg",
+      "bytes": 251,
+      "sha256": "782511ab03e31e3bdbacf6f00c4a60b2f4e2f38f14a342f63ff687f5f37cee1b",
+      "category": "ui"
+    },
+    {
+      "path": "ui/motion/profile.svg",
+      "bytes": 296,
+      "sha256": "aa6b112d132b02246c8b2e29ee6959ef531a96cf1bea670c8f197cdc226828a0",
+      "category": "ui"
+    },
+    {
+      "path": "ui/motion/rest.svg",
+      "bytes": 316,
+      "sha256": "c0dd57dd6964bf3f2b06c7c528378ff8bbde160140e97c261c081c3713914c3f",
+      "category": "ui"
+    },
+    {
+      "path": "ui/motion/save.svg",
+      "bytes": 290,
+      "sha256": "83080496248e6d5950f5606c86bd8bd54c5bad490f22e3b02936aedfcfb377a4",
+      "category": "ui"
+    },
+    {
+      "path": "ui/motion/shell.svg",
+      "bytes": 308,
+      "sha256": "ccc77cb9223c82d0ab180366fe92cf3edc560a1f18d8ff91e32226348d20d004",
+      "category": "ui"
+    },
+    {
+      "path": "ui/motion/sonar.svg",
+      "bytes": 344,
+      "sha256": "90608ea12a713601542697255e0e0663f55e66b62ebe914ca87b185d1ac59bbe",
+      "category": "ui"
+    },
+    {
+      "path": "ui/motion/spin.svg",
+      "bytes": 263,
+      "sha256": "635a70ee642b29597a6e539226dfe296cb2b95bf733dbdde8b823065965328d3",
+      "category": "ui"
+    },
+    {
+      "path": "ui/motion/wave.svg",
+      "bytes": 335,
+      "sha256": "c9ae46860da17bef223464d4a2731eb2642fbfed12b113a226a568090512748c",
       "category": "ui"
     }
   ]
