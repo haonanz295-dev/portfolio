@@ -1,0 +1,12 @@
+{
+  "document_qc_offline_ocr.py": "0d3cccb8fa46beecb210138cce041fd3d8b4e4b0083e3dbeb99d15cc7d8d1be5",
+  "README.md": "0eee3a58c53d0983877a245058d5828a6e6da490a54a1913617ea9e925e9850f",
+  "requirements.txt": "52a10eee4cf3e7698427233ae1e76454e0c8952e19315fc99f00a4539eee9e30",
+  "start_windows.bat": "15eb0a06d67e8fb3605f7104b1e968042c281fb0ec02fb24a80873dc0509a937",
+  "tessdata/chi_sim.traineddata": "a5fcb6f0db1e1d6d8522f39db4e848f05984669172e584e8d76b6b3141e1f730",
+  "tessdata/eng.traineddata": "7d4322bd2a7749724879683fc3912cb542f19906c83bcc1a52132556427170b2",
+  "tessdata/LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+  "THIRD_PARTY_NOTICES.md": "08008cd2d35a6b05a9cb6b6fc504bb2ff73e33114e0e2428188ac7b3edbbb862",
+  "verify_package.py": "cdf4ff828e3529edc1997474fdde9097bba4559d9140ab7cff9864c1f75f8973",
+  "二分类版使用说明.txt": "54ca062c360ff1646ad0a9a28fd26cb7faf9eab016306db03b23535d5305d484"
+}
